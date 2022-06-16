@@ -9,7 +9,7 @@ namespace KHCharacterEdit.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int WeaponID { get; set; }
+        public int? WeaponID { get; set; }
 
         public virtual ICollection<ArmorSlot> ArmorSlots { get; set; }
         public virtual ICollection<AccessorySlot> AccessorySlots { get; set; }
