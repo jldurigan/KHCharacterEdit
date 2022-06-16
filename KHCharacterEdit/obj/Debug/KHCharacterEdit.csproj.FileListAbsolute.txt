@@ -81,3 +81,7 @@ C:\workspace\KHCharacterEdit\KHCharacterEdit\obj\Debug\KHCharacterEdit.csproj.Co
 C:\workspace\KHCharacterEdit\KHCharacterEdit\obj\Debug\KHCharacterEdit.csproj.CopyComplete
 C:\workspace\KHCharacterEdit\KHCharacterEdit\obj\Debug\KHCharacterEdit.dll
 C:\workspace\KHCharacterEdit\KHCharacterEdit\obj\Debug\KHCharacterEdit.pdb
+C:\workspace\KHCharacterEdit\KHCharacterEdit\bin\EntityFramework.dll
+C:\workspace\KHCharacterEdit\KHCharacterEdit\bin\EntityFramework.SqlServer.dll
+C:\workspace\KHCharacterEdit\KHCharacterEdit\bin\EntityFramework.xml
+C:\workspace\KHCharacterEdit\KHCharacterEdit\bin\EntityFramework.SqlServer.xml
