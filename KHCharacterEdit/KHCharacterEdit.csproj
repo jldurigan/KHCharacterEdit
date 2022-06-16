@@ -131,6 +131,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accessory.cs" />
+    <Compile Include="Models\AccessorySlot.cs" />
+    <Compile Include="Models\Armor.cs" />
+    <Compile Include="Models\ArmorSlot.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Type.cs" />
+    <Compile Include="Models\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
