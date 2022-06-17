@@ -10,6 +10,6 @@ namespace KHCharacterEdit.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<AccessorySlot> AccessorySlots { get; set; }
+        public virtual ICollection<Character> Characters{ get; set; }
     }
 }

@@ -15,9 +15,7 @@ namespace KHCharacterEdit.DAL
         }
 
         public DbSet<Accessory> Accessories { get; set; }
-        public DbSet<AccessorySlot> AccessorySlots { get; set; }
         public DbSet<Armor> Armors { get; set; }
-        public DbSet<ArmorSlot> ArmorSlots { get; set; }
         public DbSet<Character> Characters { get; set; }
         public DbSet<Weapon> Weapons { get; set; }
 

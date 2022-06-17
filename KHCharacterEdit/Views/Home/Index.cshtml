@@ -12,19 +12,24 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="char">
         <h2>Characters</h2>
         <p>List of the characters in the games, like Sora, Donald and Goofy.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Character")></a></p>
     </div>
     <div class="col-md-4">
         <h2>Weapons</h2>
         <p>List of the weapons in the games, like Keyblades, Staffs and Shields.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Weapon")></a></p>
     </div>
     <div class="col-md-4">
-        <h2>Armors and Accessories</h2>
-        <p>List of armors and accessories in the games, like bands and rings.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Armors</h2>
+        <p>List of armors in the games, like Acrisius and Power Band.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Armor")></a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Accessories</h2>
+        <p>List of accessories in the games, like Ability Ring and Full Moon.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Accessory")></a></p>
     </div>
 </div>

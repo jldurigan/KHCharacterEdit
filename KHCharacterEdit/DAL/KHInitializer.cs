@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using Type = KHCharacterEdit.Models.Type;
 
 namespace KHCharacterEdit.DAL
 {
@@ -14,9 +13,9 @@ namespace KHCharacterEdit.DAL
         {
             var weapons = new List<Weapon>
             {
-                new Weapon{Name="Kingdom Key", Type=Type.Keyblade},
-                new Weapon{Name="Save the Queen", Type=Type.Staff},
-                new Weapon{Name="Save the King", Type=Type.Shield}
+                new Weapon{Name="Kingdom Key", WeaponType=WeaponType.Keyblade},
+                new Weapon{Name="Save the Queen", WeaponType=WeaponType.Staff},
+                new Weapon{Name="Save the King", WeaponType=WeaponType.Shield}
             };
 
             weapons.ForEach(s => context.Weapons.Add(s));
@@ -40,9 +39,9 @@ namespace KHCharacterEdit.DAL
 
             var characters = new List<Character>
             {
-                new Character{Name="Sora"},
-                new Character{Name="Donald"},
-                new Character{Name="Goofy"}
+                new Character{Name="Sora",WeaponID=0},
+                new Character{Name="Donald", WeaponID=1},
+                new Character{Name="Goofy", WeaponID=2}
             };
 
             characters.ForEach(s => context.Characters.Add(s));

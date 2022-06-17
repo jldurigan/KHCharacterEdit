@@ -6431,6 +6431,16 @@ button.close {
 .carousel-caption .btn {
   text-shadow: none;
 }
+
+/*ALTERAÇÕES: jldurigan*/
+.char{
+    display: block;
+    padding-right: 25%;
+    padding-left: 35%;
+    width: 90%;
+}
+
+
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,

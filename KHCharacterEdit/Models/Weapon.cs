@@ -6,7 +6,7 @@ using System.Web;
 namespace KHCharacterEdit.Models
 {
 
-    public enum Type
+    public enum WeaponType
     {
         Keyblade, Shield, Staff, Other
     }
@@ -15,7 +15,7 @@ namespace KHCharacterEdit.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public Type Type { get; set; }
+        public WeaponType WeaponType { get; set; }
 
         public virtual ICollection<Character> Characters { get; set; }
     }
