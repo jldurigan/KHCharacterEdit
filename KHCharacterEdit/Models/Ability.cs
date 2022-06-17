@@ -5,15 +5,15 @@ using System.Web;
 
 namespace KHCharacterEdit.Models
 {
-    public class Character
+    public class Ability
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int? WeaponID { get; set; }
+        public int AbilityPoints { get; set; }
+        public string Description { get; set; }
 
-        public virtual Weapon Weapon { get; set; }
-        public virtual ICollection<Armor> Armors { get; set; }
+        public virtual ICollection<Character> Characters { get; set; }
         public virtual ICollection<Accessory> Accessories { get; set; }
-        public virtual ICollection<Ability> Abilities { get; set; }
+        public virtual ICollection<Weapon> Weapons { get; set; }
     }
 }

@@ -9,6 +9,12 @@ namespace KHCharacterEdit.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public int Strength { get; set; }
+        public int Defense { get; set; }
+        public int FireResistance { get; set; }
+        public int IceResistance { get; set; }
+        public int ThunderResistance { get; set; }
+        public int DarkResistance { get; set; }
 
         public virtual ICollection<Character> Characters { get; set; }
     }

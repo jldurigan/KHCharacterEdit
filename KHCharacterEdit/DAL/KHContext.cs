@@ -18,6 +18,7 @@ namespace KHCharacterEdit.DAL
         public DbSet<Armor> Armors { get; set; }
         public DbSet<Character> Characters { get; set; }
         public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<Ability> Abilities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
