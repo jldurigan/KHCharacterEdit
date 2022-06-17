@@ -127,8 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccessoryController.cs" />
+    <Compile Include="Controllers\ArmorController.cs" />
     <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WeaponController.cs" />
     <Compile Include="DAL\KHContext.cs" />
     <Compile Include="DAL\KHInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,6 +152,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\kingdom-hearts-n0-1920x1080.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -181,6 +185,21 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Character\Edit.cshtml" />
     <Content Include="Views\Character\Index.cshtml" />
+    <Content Include="Views\Armor\Create.cshtml" />
+    <Content Include="Views\Armor\Delete.cshtml" />
+    <Content Include="Views\Armor\Details.cshtml" />
+    <Content Include="Views\Armor\Edit.cshtml" />
+    <Content Include="Views\Armor\Index.cshtml" />
+    <Content Include="Views\Accessory\Create.cshtml" />
+    <Content Include="Views\Accessory\Delete.cshtml" />
+    <Content Include="Views\Accessory\Details.cshtml" />
+    <Content Include="Views\Accessory\Edit.cshtml" />
+    <Content Include="Views\Accessory\Index.cshtml" />
+    <Content Include="Views\Weapon\Create.cshtml" />
+    <Content Include="Views\Weapon\Delete.cshtml" />
+    <Content Include="Views\Weapon\Details.cshtml" />
+    <Content Include="Views\Weapon\Edit.cshtml" />
+    <Content Include="Views\Weapon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

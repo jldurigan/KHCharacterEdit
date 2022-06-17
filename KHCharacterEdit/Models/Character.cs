@@ -11,6 +11,7 @@ namespace KHCharacterEdit.Models
         public string Name { get; set; }
         public int? WeaponID { get; set; }
 
+        public virtual Weapon Weapon { get; set; }
         public virtual ICollection<Armor> Armors { get; set; }
         public virtual ICollection<Accessory> Accessories { get; set; }
     }

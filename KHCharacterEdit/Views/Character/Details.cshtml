@@ -19,11 +19,47 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.WeaponID)
+            @Html.DisplayNameFor(model => model.Weapon)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.WeaponID)
+            @Html.DisplayFor(model => model.Weapon.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Armors)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Armors</th>
+                </tr>
+                @foreach (var item in Model.Armors)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Accessories</th>
+                </tr>
+                @foreach (var item in Model.Accessories)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                    </tr>
+                }
+            </table>
         </dd>
 
     </dl>
