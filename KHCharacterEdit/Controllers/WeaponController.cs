@@ -18,7 +18,8 @@ namespace KHCharacterEdit.Controllers
         // GET: Weapon
         public ActionResult Index()
         {
-            return View(db.Weapons.ToList());
+            var weapons = db.Weapons.Include(w => w.Ability);
+            return View(weapons.ToList());
         }
 
         // GET: Weapon/Details/5
@@ -39,6 +40,7 @@ namespace KHCharacterEdit.Controllers
         // GET: Weapon/Create
         public ActionResult Create()
         {
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,WeaponType")] Weapon weapon)
+        public ActionResult Create([Bind(Include = "ID,Name,Strength,Magic,AbilityID,WeaponType")] Weapon weapon)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,7 @@ namespace KHCharacterEdit.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", weapon.AbilityID);
             return View(weapon);
         }
 
@@ -71,6 +74,7 @@ namespace KHCharacterEdit.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", weapon.AbilityID);
             return View(weapon);
         }
 
@@ -79,7 +83,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,WeaponType")] Weapon weapon)
+        public ActionResult Edit([Bind(Include = "ID,Name,Strength,Magic,AbilityID,WeaponType")] Weapon weapon)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +91,7 @@ namespace KHCharacterEdit.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", weapon.AbilityID);
             return View(weapon);
         }
 

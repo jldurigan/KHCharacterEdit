@@ -47,7 +47,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name")] Armor armor)
+        public ActionResult Create([Bind(Include = "ID,Name,Strength,Defense,FireResistance,IceResistance,ThunderResistance,DarkResistance")] Armor armor)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name")] Armor armor)
+        public ActionResult Edit([Bind(Include = "ID,Name,Strength,Defense,FireResistance,IceResistance,ThunderResistance,DarkResistance")] Armor armor)
         {
             if (ModelState.IsValid)
             {

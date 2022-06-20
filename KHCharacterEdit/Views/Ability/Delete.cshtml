@@ -1,4 +1,4 @@
-﻿@model KHCharacterEdit.Models.Character
+﻿@model KHCharacterEdit.Models.Ability
 
 @{
     ViewBag.Title = "Delete";
@@ -8,17 +8,9 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Character</h4>
+    <h4>Ability</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Weapon.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weapon.Name)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -28,27 +20,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ArmorSlots)
+            @Html.DisplayNameFor(model => model.AbilityPoints)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ArmorSlots)
+            @Html.DisplayFor(model => model.AbilityPoints)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AccessorySlots)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AccessorySlots)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.WeaponType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WeaponType)
+            @Html.DisplayFor(model => model.Description)
         </dd>
 
     </dl>

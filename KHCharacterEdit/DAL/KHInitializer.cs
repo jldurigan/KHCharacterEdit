@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -77,9 +78,9 @@ namespace KHCharacterEdit.DAL
 
             var characters = new List<Character>
             {
-                new Character{Name="Sora"},
-                new Character{Name="Donald"},
-                new Character{Name="Goofy"}
+                new Character{Name="Sora", WeaponID=1, WeaponType=WeaponType.Keyblade},
+                new Character{Name="Donald", WeaponID=5, WeaponType=WeaponType.Staff},
+                new Character{Name="Goofy", WeaponID=9, WeaponType=WeaponType.Shield}
             };
 
             characters.ForEach(s => context.Characters.Add(s));

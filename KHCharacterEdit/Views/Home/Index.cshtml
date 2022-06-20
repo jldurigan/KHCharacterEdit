@@ -1,35 +1,41 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h1>KINGDOM HEARTS</h1>
-    <p class="lead">Kingdom Hearts is a crossover of various Disney properties based in an original fictional universe.
-    The series centers on the main character, Sora, and his journey and experiences with various Disney and Pixar characters,
-    as well as some from Square Enix properties, such as Final Fantasy, The World Ends With You and Einhänder,
-    in addition to original characters and locations created specifically for the series.</p>
-    <p><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Kingdom_Hearts" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="jumbotron bg-jumbotron">
+    <h1>&nbsp;</h1>
+    <p class="lead jumbotron-text">
+        Kingdom Hearts II is a 2005 action role-playing game developed and published by Square Enix in collaboration
+        with Buena Vista Games for the PlayStation 2 video game console. The game is a sequel to Kingdom Hearts, 
+        and like the original game, combines characters and settings from Disney films with those of Square Enix's Final Fantasy series.
+    </p>
+    <p><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Kingdom_Hearts_II" class="btn btn-primary btn-lg jumbotron-text">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
+<div class="row bg-buttons">
     <div class="char">
-        <h2>Characters</h2>
-        <p>List of the characters in the games, like Sora, Donald and Goofy.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Character")></a></p>
+        <h1>
+            <a class="btn btn-default btn-modified" @Html.ActionLink("CHARACTERS", "Index", "Character")></a>
+        </h1>
     </div>
-    <div class="col-md-4">
-        <h2>Weapons</h2>
-        <p>List of the weapons in the games, like Keyblades, Staffs and Shields.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Weapon")></a></p>
+    <div class="attributes">
+        <h4>
+            <a class="btn btn-default btn-modified" @Html.ActionLink("WEAPONS", "Index", "Weapon")></a>
+        </h4>
     </div>
-    <div class="col-md-4">
-        <h2>Armors</h2>
-        <p>List of armors in the games, like Acrisius and Power Band.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Armor")></a></p>
+    <div class="attributes">
+        <h4>
+            <a class="btn btn-default btn-modified" @Html.ActionLink("ARMORS", "Index", "Armor")></a>
+        </h4>
     </div>
-    <div class="col-md-4">
-        <h2>Accessories</h2>
-        <p>List of accessories in the games, like Ability Ring and Full Moon.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("GO", "Index", "Accessory")></a></p>
+    <div class="attributes">
+        <h4>
+            <a class="btn btn-default btn-modified" @Html.ActionLink("ACCESSORIES", "Index", "Accessory")></a>
+        </h4>
+    </div>
+    <div class="attributes">
+        <h4>
+            <a class="btn btn-default btn-modified" @Html.ActionLink("ABILITIES", "Index", "Ability")></a>
+        </h4>
     </div>
 </div>

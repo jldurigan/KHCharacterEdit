@@ -15,7 +15,7 @@ namespace KHCharacterEdit.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Customize your favorite characters from this beloved series!";
+            ViewBag.Message = "Customize your party just like in the game!";
 
             return View();
         }

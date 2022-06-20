@@ -14,6 +14,24 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Strength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Defense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FireResistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IceResistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThunderResistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DarkResistance)
+        </th>
         <th></th>
     </tr>
 
@@ -21,6 +39,24 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Strength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Defense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FireResistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IceResistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThunderResistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DarkResistance)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

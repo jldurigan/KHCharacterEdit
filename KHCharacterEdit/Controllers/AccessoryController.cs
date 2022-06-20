@@ -18,7 +18,8 @@ namespace KHCharacterEdit.Controllers
         // GET: Accessory
         public ActionResult Index()
         {
-            return View(db.Accessories.ToList());
+            var accessories = db.Accessories.Include(a => a.Ability);
+            return View(accessories.ToList());
         }
 
         // GET: Accessory/Details/5
@@ -39,6 +40,7 @@ namespace KHCharacterEdit.Controllers
         // GET: Accessory/Create
         public ActionResult Create()
         {
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name")] Accessory accessory)
+        public ActionResult Create([Bind(Include = "ID,Name,AbilityPoints,Strength,Magic,AbilityID")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,7 @@ namespace KHCharacterEdit.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", accessory.AbilityID);
             return View(accessory);
         }
 
@@ -71,6 +74,7 @@ namespace KHCharacterEdit.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", accessory.AbilityID);
             return View(accessory);
         }
 
@@ -79,7 +83,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name")] Accessory accessory)
+        public ActionResult Edit([Bind(Include = "ID,Name,AbilityPoints,Strength,Magic,AbilityID")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +91,7 @@ namespace KHCharacterEdit.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AbilityID = new SelectList(db.Abilities, "ID", "Name", accessory.AbilityID);
             return View(accessory);
         }
 

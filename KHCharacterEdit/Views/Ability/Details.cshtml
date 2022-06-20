@@ -1,4 +1,4 @@
-﻿@model KHCharacterEdit.Models.Accessory
+﻿@model KHCharacterEdit.Models.Ability
 
 @{
     ViewBag.Title = "Details";
@@ -7,17 +7,9 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Accessory</h4>
+    <h4>Ability</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Ability.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ability.Name)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -35,19 +27,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Strength)
+            @Html.DisplayNameFor(model => model.Description)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Strength)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Magic)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Magic)
+            @Html.DisplayFor(model => model.Description)
         </dd>
 
     </dl>

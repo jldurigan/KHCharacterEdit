@@ -26,10 +26,34 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.WeaponID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ArmorSlots, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.WeaponID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.ArmorSlots, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ArmorSlots, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccessorySlots, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccessorySlots, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccessorySlots, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WeaponID, "WeaponID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("WeaponID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.WeaponID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WeaponType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.WeaponType, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WeaponType, "", new { @class = "text-danger" })
             </div>
         </div>
 

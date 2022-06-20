@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,12 +10,13 @@ namespace KHCharacterEdit.Models
 
     public enum WeaponType
     {
-        Keyblade, Shield, Staff, Other
+        Keyblade, Staff, Shield
     }
 
     public class Weapon
     {
         public int ID { get; set; }
+        [Required, MaxLength(20)]
         public string Name { get; set; }
         public int Strength { get; set; }
         public int Magic { get; set; }
@@ -21,6 +24,5 @@ namespace KHCharacterEdit.Models
         public WeaponType WeaponType { get; set; }
 
         public virtual Ability Ability { get; set; }
-        public virtual ICollection<Character> Characters { get; set; }
     }
 }
