@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<KHCharacterEdit.Models.Armor>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Armors";
 }
 
 <h2>Index</h2>
@@ -21,16 +21,16 @@
             @Html.DisplayNameFor(model => model.Defense)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FireResistance)
+            @Html.DisplayName("Fire Resistance")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IceResistance)
+            @Html.DisplayName("Ice Resistance")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ThunderResistance)
+            @Html.DisplayName("Thunder Resistance")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DarkResistance)
+            @Html.DisplayName("Dark Resistance")
         </th>
         <th></th>
     </tr>
@@ -47,20 +47,19 @@
             @Html.DisplayFor(modelItem => item.Defense)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FireResistance)
+            @Html.DisplayFor(modelItem => item.FireResistance)%
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IceResistance)
+            @Html.DisplayFor(modelItem => item.IceResistance)%
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ThunderResistance)
+            @Html.DisplayFor(modelItem => item.ThunderResistance)%
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DarkResistance)
+            @Html.DisplayFor(modelItem => item.DarkResistance)%
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

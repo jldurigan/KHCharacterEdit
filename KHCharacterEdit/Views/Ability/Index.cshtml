@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<KHCharacterEdit.Models.Ability>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Abilities";
 }
 
 <h2>Index</h2>
@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AbilityPoints)
+            @Html.DisplayName("Ability Points")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -36,7 +36,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

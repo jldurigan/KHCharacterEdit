@@ -36,6 +36,21 @@ namespace KHCharacterEdit.Controllers
             return View(ability);
         }
 
+        // GET: Ability/Details/5
+        public ActionResult DetailsExternal(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Ability ability = db.Abilities.Find(id);
+            if (ability == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ability);
+        }
+
         // GET: Ability/Create
         public ActionResult Create()
         {
