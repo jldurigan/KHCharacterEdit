@@ -50,6 +50,48 @@
             @Html.DisplayFor(model => model.WeaponType)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Armors)
+        </dt>
+
+        @if (Model.Armors != null)
+        {
+            foreach (var item in Model.Armors)
+            {
+                <dd>
+                    @Html.ActionLink(item.Name, "Details", "Armor", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories)
+        </dt>
+
+        @if (Model.Accessories != null)
+        {
+            foreach (var item in Model.Accessories)
+            {
+                <dd>
+                    @Html.ActionLink(item.Name, "Details", "Accessory", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abilities)
+        </dt>
+
+        @if (Model.Abilities != null)
+        {
+            foreach (var item in Model.Abilities)
+            {
+                <dd>
+                    @Html.ActionLink(item.Name, "Details", "Ability", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
+
     </dl>
 </div>
 <p>

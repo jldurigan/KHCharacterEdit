@@ -184,7 +184,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Ability\Create.cshtml" />
     <Content Include="Views\Ability\Delete.cshtml" />
-    <Content Include="Views\Ability\Details.cshtml" />
     <Content Include="Views\Ability\Edit.cshtml" />
     <Content Include="Views\Ability\Index.cshtml" />
     <Content Include="Views\Accessory\Create.cshtml" />
@@ -194,12 +193,10 @@
     <Content Include="Views\Accessory\Index.cshtml" />
     <Content Include="Views\Armor\Create.cshtml" />
     <Content Include="Views\Armor\Delete.cshtml" />
-    <Content Include="Views\Armor\Details.cshtml" />
     <Content Include="Views\Armor\Edit.cshtml" />
     <Content Include="Views\Armor\Index.cshtml" />
     <Content Include="Views\Weapon\Create.cshtml" />
     <Content Include="Views\Weapon\Delete.cshtml" />
-    <Content Include="Views\Weapon\Details.cshtml" />
     <Content Include="Views\Weapon\Edit.cshtml" />
     <Content Include="Views\Weapon\Index.cshtml" />
     <Content Include="Views\Character\Create.cshtml" />
@@ -207,6 +204,8 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Character\Edit.cshtml" />
     <Content Include="Views\Character\Index.cshtml" />
+    <Content Include="Views\Ability\Details.cshtml" />
+    <Content Include="Views\Weapon\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,9 +12,9 @@ namespace KHCharacterEdit.Models
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
-        public int AbilityPoints { get; set; }
-        public int Strength { get; set; }
-        public int Magic { get; set; }
+        public int AbilityPoints { get; set; } = 0;
+        public int Strength { get; set; } = 0;
+        public int Magic { get; set; } = 0;
         public int? AbilityID { get; set; }
 
         public virtual Ability Ability { get; set; }

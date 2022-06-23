@@ -18,8 +18,8 @@ namespace KHCharacterEdit.Models
         public int ID { get; set; }
         [Required, MaxLength(20)]
         public string Name { get; set; }
-        public int Strength { get; set; }
-        public int Magic { get; set; }
+        public int Strength { get; set; } = 0;
+        public int Magic { get; set; } = 0;
         public int? AbilityID { get; set; }
         public WeaponType WeaponType { get; set; }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -112,7 +113,14 @@ namespace KHCharacterEdit.Controllers
         {
             Armor armor = db.Armors.Find(id);
             db.Armors.Remove(armor);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                return Content("<script language='javascript' type='text/javascript'>alert('Não é possível deletar pois o registro já está vinculado! Verifique os vínculos.');</script>");
+            }
             return RedirectToAction("Index");
         }
 

@@ -15,6 +15,7 @@ namespace KHCharacterEdit.Models
         public int ArmorSlots { get; set; } = 1;
         public int AccessorySlots { get; set; } = 1;
         public int WeaponID { get; set; }
+        public int AbilitySlots { get; set; } = 1;
 
         public virtual WeaponType WeaponType { get; set; }
         public virtual Weapon Weapon { get; set; }

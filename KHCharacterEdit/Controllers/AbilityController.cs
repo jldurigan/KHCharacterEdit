@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -127,7 +128,14 @@ namespace KHCharacterEdit.Controllers
         {
             Ability ability = db.Abilities.Find(id);
             db.Abilities.Remove(ability);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                return Content("<script language='javascript' type='text/javascript'>alert('Não é possível deletar pois o registro já está vinculado! Verifique os vínculos.');</script>");
+            }
             return RedirectToAction("Index");
         }
 

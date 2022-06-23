@@ -24,6 +24,9 @@
             @Html.DisplayName("Accessory Slots")
         </th>
         <th>
+            @Html.DisplayName("Ability Slots")
+        </th>
+        <th>
             @Html.DisplayName("Weapon Type")
         </th>
         <th></th>
@@ -44,12 +47,15 @@
             @Html.DisplayFor(modelItem => item.AccessorySlots)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.AbilitySlots)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.WeaponType)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
         </td>
     </tr>
 }

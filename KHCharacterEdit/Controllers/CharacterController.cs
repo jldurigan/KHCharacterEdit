@@ -49,7 +49,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,ArmorSlots,AccessorySlots,WeaponID,WeaponType")] Character character)
+        public ActionResult Create([Bind(Include = "ID,Name,ArmorSlots,AccessorySlots,WeaponID,AbilitySlots,WeaponType")] Character character)
         {
             if (ModelState.IsValid)
             {
@@ -75,6 +75,9 @@ namespace KHCharacterEdit.Controllers
                 return HttpNotFound();
             }
             ViewBag.WeaponID = new SelectList(db.Weapons, "ID", "Name", character.WeaponID);
+            ViewBag.Armors = new SelectList(db.Armors, "ID", "Name", character.Armors);
+            ViewBag.Accessories = new SelectList(db.Accessories, "ID", "Name", character.Accessories);
+            ViewBag.Abilities = new SelectList(db.Abilities, "ID", "Name", character.Abilities);
             return View(character);
         }
 
@@ -83,7 +86,7 @@ namespace KHCharacterEdit.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,ArmorSlots,AccessorySlots,WeaponID,WeaponType")] Character character)
+        public ActionResult Edit([Bind(Include = "ID,Name,ArmorSlots,AccessorySlots,WeaponID,AbilitySlots,WeaponType")] Character character)
         {
             if (ModelState.IsValid)
             {
@@ -92,6 +95,9 @@ namespace KHCharacterEdit.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.WeaponID = new SelectList(db.Weapons, "ID", "Name", character.WeaponID);
+            ViewBag.Armors = new SelectList(db.Armors, "ID", "Name", character.Armors);
+            ViewBag.Accessories = new SelectList(db.Accessories, "ID", "Name", character.Accessories);
+            ViewBag.Abilities = new SelectList(db.Abilities, "ID", "Name", character.Abilities);
             return View(character);
         }
 
