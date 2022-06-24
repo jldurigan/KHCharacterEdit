@@ -14,6 +14,7 @@ namespace KHCharacterEdit.DAL
         {
         }
 
+        //Especifica quais tabelas serão relacionadas
         public DbSet<Accessory> Accessories { get; set; }
         public DbSet<Armor> Armors { get; set; }
         public DbSet<Character> Characters { get; set; }
@@ -22,8 +23,8 @@ namespace KHCharacterEdit.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); //Remove a configuração que cria as tabelas com nomes no plural por padrão
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //Remove a configuração que faz com que tabelas com relação um-para-muitos façam exclusões em cascata
         }
     }
 }

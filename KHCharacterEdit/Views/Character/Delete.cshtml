@@ -12,14 +12,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Weapon.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weapon.Name)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
 
@@ -28,7 +20,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ArmorSlots)
+            @Html.DisplayNameFor(model => model.Weapon)
+        </dt>
+
+        <dd>
+            <!--Gera link para acesso direto à View Details da Weapon vinculada-->
+            @Html.ActionLink(Model.Weapon.Name, "Details", "Weapon", new { id = Model.Weapon.ID }, Html.DisplayFor(model => model.Weapon.Name))
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Armor Slots")
         </dt>
 
         <dd>
@@ -36,7 +37,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AccessorySlots)
+            @Html.DisplayName("Accessory Slots")
         </dt>
 
         <dd>
@@ -44,12 +45,54 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.WeaponType)
+            @Html.DisplayName("Weapon Type")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.WeaponType)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Armors)
+        </dt>
+
+        @if (Model.Armors != null) //Confere se há Armors vinculadas ao Character
+        {
+            foreach (var item in Model.Armors) //Percorre a lista de Armors vinculadas
+            {
+                <dd> <!--Gera link de acesso direto à View Details da Armor vinculada-->
+                    @Html.ActionLink(item.Name, "Details", "Armor", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories)
+        </dt>
+
+        @if (Model.Accessories != null) //Confere se há Accessories vinculados ao Character
+        {
+            foreach (var item in Model.Accessories) //Percorre a lista de Accessories vinculados
+            {
+                <dd> <!--Gera link de acesso direto à View Details do Accessory vinculado-->
+                    @Html.ActionLink(item.Name, "Details", "Accessory", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abilities)
+        </dt>
+
+        @if (Model.Abilities != null) //Confere se há Abilities vinculadas ao Character
+        {
+            foreach (var item in Model.Abilities) //Percorre a lista de Abilities vinculadas
+            {
+                <dd> <!--Gera link de acesso direto à View Details da Ability vinculada-->
+                    @Html.ActionLink(item.Name, "Details", "Ability", new { id = item.ID }, Html.DisplayFor(modelItem => item))
+                </dd>
+            }
+        }
 
     </dl>
 

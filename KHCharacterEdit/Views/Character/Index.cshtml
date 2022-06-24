@@ -37,8 +37,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weapon.Name)
+        <td> <!--Gera link de acesso direto à View Details da Weapon vinculada-->
+            @Html.ActionLink(item.Weapon.Name, "Details", "Weapon", new { id = item.Weapon.ID }, Html.DisplayFor(modelItem => item.Weapon.Name))
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ArmorSlots)

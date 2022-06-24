@@ -42,6 +42,14 @@
     </div>
 
     <div class="form-group">
+        @Html.Label("Ability Slots", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AbilitySlots, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.AbilitySlots, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(model => model.Weapon, "Weapon", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.DropDownList("WeaponID", null, htmlAttributes: new { @class = "form-control" })
@@ -57,15 +65,37 @@
         </div>
     </div>
 
-    @for(int i = 0; i < Model.ArmorSlots; i++)
+    @for (int i = 0; i < Model.ArmorSlots; i++) //Cria uma quantidade determinada de DropDownLists contendo Armors de acordo com o número de Slots
     {
         <div class="form-group">
-        @Html.LabelFor(model => model.Armors, "Armor Slot "+(i+1), htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("Armors", null, htmlAttributes: new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Armors, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.Armors, "Armor Slot " + (i + 1), htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Armors", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Armors, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
+    }
+
+    @for (int i = 0; i < Model.AccessorySlots; i++) //Cria uma quantidade determinada de DropDownLists contendo Accessories de acordo com o número de Slots
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.Accessories, "Accessory Slot " + (i + 1), htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Accessories", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Accessories, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+
+    @for (int i = 0; i < Model.AbilitySlots; i++) //Cria uma quantidade determinada de DropDownLists contendo Abilities de acordo com o número de Slots
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.Abilities, "Ability Slot " + (i + 1), htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Abilities", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Abilities, "", new { @class = "text-danger" })
+            </div>
+        </div>
     }
 
     <div class="form-group">

@@ -206,6 +206,7 @@
     <Content Include="Views\Character\Index.cshtml" />
     <Content Include="Views\Ability\Details.cshtml" />
     <Content Include="Views\Weapon\Details.cshtml" />
+    <Content Include="Views\Armor\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

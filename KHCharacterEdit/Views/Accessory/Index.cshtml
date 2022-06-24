@@ -44,9 +44,9 @@
             @Html.DisplayFor(modelItem => item.Magic)
         </td>
         <td>
-            @if (item.Ability != null)
-            {
-                @Html.ActionLink(item.Ability.Name, "Details", "Ability", new { id = item.AbilityID }, Html.DisplayFor(modelItem => item.Ability))
+            @if (item.Ability != null) //Confere se há uma Ability vinculada ao Accessory
+            { //Gera link de acesso direto à View Details da Ability vinculada
+                @Html.ActionLink(item.Ability.Name, "Details", "Ability", new { id = item.Ability.ID }, Html.DisplayFor(modelItem => item.Ability.Name))
             }
         </td>
         <td>

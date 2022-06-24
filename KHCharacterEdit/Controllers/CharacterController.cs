@@ -74,10 +74,10 @@ namespace KHCharacterEdit.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.WeaponID = new SelectList(db.Weapons, "ID", "Name", character.WeaponID);
-            ViewBag.Armors = new SelectList(db.Armors, "ID", "Name", character.Armors);
-            ViewBag.Accessories = new SelectList(db.Accessories, "ID", "Name", character.Accessories);
-            ViewBag.Abilities = new SelectList(db.Abilities, "ID", "Name", character.Abilities);
+            ViewBag.WeaponID = new SelectList(db.Weapons, "ID", "Name", character.WeaponID); //Gera a lista que vai preencher a DropDownList na View
+            ViewBag.Armors = new SelectList(db.Armors, "ID", "Name", character.Armors); //Gera a lista que vai preencher a DropDownList na View
+            ViewBag.Accessories = new SelectList(db.Accessories, "ID", "Name", character.Accessories); //Gera a lista que vai preencher a DropDownList na View
+            ViewBag.Abilities = new SelectList(db.Abilities, "ID", "Name", character.Abilities); //Gera a lista que vai preencher a DropDownList na View
             return View(character);
         }
 

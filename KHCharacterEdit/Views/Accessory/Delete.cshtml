@@ -12,14 +12,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Ability.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ability.Name)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
 
@@ -28,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AbilityPoints)
+            @Html.DisplayName("Ability Points")
         </dt>
 
         <dd>
@@ -49,6 +41,17 @@
 
         <dd>
             @Html.DisplayFor(model => model.Magic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ability)
+        </dt>
+
+        <dd>
+            @if (Model.Ability != null) //Confere se há uma Ability vinculada ao Accessory
+            { //Gera link de acesso direto à View Details da Ability vinculada
+                @Html.ActionLink(Model.Ability.Name, "Details", "Ability", new { id = Model.Ability.ID }, Html.DisplayFor(modelItem => Model.Ability))
+            }
         </dd>
 
     </dl>

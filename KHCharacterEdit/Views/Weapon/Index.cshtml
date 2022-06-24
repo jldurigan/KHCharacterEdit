@@ -43,8 +43,8 @@
                 @Html.DisplayFor(modelItem => item.Magic)
             </td>
             <td>
-                @if (item.Ability != null)
-                {
+                @if (item.Ability != null) //Confere se há uma Ability vinculada à Weapon
+                { //Gera link de acesso direto à View Details da Ability vinculada
                     @Html.ActionLink(item.Ability.Name, "Details", "Ability", new { id = item.AbilityID }, Html.DisplayFor(modelItem => item.Ability))
                 }
             </td>
