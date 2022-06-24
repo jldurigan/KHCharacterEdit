@@ -134,7 +134,7 @@ namespace KHCharacterEdit.Controllers
             }
             catch (DbUpdateException) //Impede a aplicação de travar ao tentar apagar um registro já vinculado a outro e mostra um aviso na tela
             {
-                return Content("<script language='javascript' type='text/javascript'>alert('You can't delete an ability already equipped to a character, accessory or weapon!');</script>");
+                return Content("<script language='javascript' type='text/javascript'>alert('You cannnot delete an ability already equipped to a character, accessory or weapon!');</script>");
             }
             return RedirectToAction("Index");
         }
